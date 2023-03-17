@@ -1,0 +1,38 @@
+POST http://localhost:8099/rest/server/containers/helloworld-application-kjar-1_0-SNAPSHOT/processes/business_application_kjar.hello_process/instances
+Accept: application/json
+Content-Type: application/json
+
+{
+    "status": 0,
+    "message": "Hello World!"
+}
+
+###
+GET http://localhost:8099/rest/server
+Authorization: Basic user:user
+Accept: application/json
+
+###
+GET http://localhost:8099/rest/server/containers
+Accept: application/json
+
+###
+GET http://localhost:8099/rest/server/containers/helloworld-application-kjar-1_0-SNAPSHOT
+Accept: application/json
+
+###
+GET http://localhost:8099/rest/server/containers/helloworld-application-kjar-1_0-SNAPSHOT/processes
+Authorization: Basic user:user
+Accept: application/json
+
+###
+GET http://localhost:8099/rest/server/queries/processes/business_application_kjar.hello_process/instances
+Accept: application/json
+
+###
+GET http://localhost:8099/rest/server/containers/helloworld-application-kjar-1_0-SNAPSHOT/processes/definitions/business_application_kjar.hello_process
+Accept: application/json
+
+###
+GET http://localhost:8099/rest/server/containers/helloworld-application-kjar-1_0-SNAPSHOT/processes/definitions/business_application_kjar.hello_process/tasks/service
+Accept: application/json
